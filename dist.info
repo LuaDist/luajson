@@ -1,0 +1,16 @@
+--- This file is part of LuaDist project
+
+name = "luajson"
+version = "1.2.1"
+
+desc = "JSON Parser/Constructor for Lua."
+author = "Thomas Harning Jr."
+license = "Public Domain/MIT"
+maintainer = "Peter Kapec"
+url = "http://luaforge.net/projects/luajson/"
+
+depends = {
+	"lua ~> 5.1",
+	"lpeg >=0.8.1",
+	"luafilesystem >=1.4.1"
+}
