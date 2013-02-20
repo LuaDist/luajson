@@ -1,0 +1,65 @@
+type = "x86"
+arch = "Windows"
+author = "Thomas Harning Jr."
+depends = {
+[[lua ~> 5.1]],
+[[lpeg >=0.8.1]],
+[[luafilesystem >=1.4.1]],
+}
+
+desc = "JSON Parser/Constructor for Lua."
+version = "1.2.1"
+maintainer = "Peter Kapec"
+files = {
+Runtime = {
+[[lib\lua\json\decode\array.lua]],
+[[lib\lua\json\decode\calls.lua]],
+[[lib\lua\json\decode\number.lua]],
+[[lib\lua\json\decode\object.lua]],
+[[lib\lua\json\decode\others.lua]],
+[[lib\lua\json\decode\strings.lua]],
+[[lib\lua\json\decode\util.lua]],
+[[lib\lua\json\decode.lua]],
+[[lib\lua\json\encode\array.lua]],
+[[lib\lua\json\encode\calls.lua]],
+[[lib\lua\json\encode\number.lua]],
+[[lib\lua\json\encode\object.lua]],
+[[lib\lua\json\encode\others.lua]],
+[[lib\lua\json\encode\output.lua]],
+[[lib\lua\json\encode\output_utility.lua]],
+[[lib\lua\json\encode\strings.lua]],
+[[lib\lua\json\encode.lua]],
+[[lib\lua\json\util.lua]],
+[[lib\lua\json.lua]],
+}
+,
+Documentation = {
+[[share\luajson\doc\\LuaJSON.txt]],
+[[share\luajson\doc\\ReleaseNotes-0.10.txt]],
+[[share\luajson\doc\\ReleaseNotes-0.9.1.txt]],
+[[share\luajson\doc\\ReleaseNotes-0.9.txt]],
+[[share\luajson\doc\\ReleaseNotes-1.0.1.txt]],
+[[share\luajson\doc\\ReleaseNotes-1.0.2.txt]],
+[[share\luajson\doc\\ReleaseNotes-1.0.txt]],
+[[share\luajson\doc\\ReleaseNotes-1.1.1.txt]],
+[[share\luajson\doc\\ReleaseNotes-1.1.txt]],
+[[share\luajson\doc\\ReleaseNotes-1.2.1.txt]],
+[[share\luajson\doc\\ReleaseNotes-1.2.txt]],
+}
+,
+Data = {
+[[share\luajson\LICENSE]],
+[[share\luajson\README]],
+}
+,
+Other = {
+[[share\luajson\etc\\createRock.lua]],
+[[share\luajson\etc\\prepareNextRelease.lua]],
+[[share\luajson\etc\\processShortlog.lua]],
+}
+,
+}
+
+license = "Public Domain/MIT"
+name = "luajson"
+url = "http://luaforge.net/projects/luajson/"
