@@ -5,8 +5,10 @@
 local string_char = require("string").char
 local pairs = pairs
 
-local util_merge = require("json.util").merge
-module("json.encode.strings")
+local jsonutil = require("json.util")
+local util_merge = jsonutil.merge
+
+local _ENV = nil
 
 local normalEncodingMap = {
 	['"'] = '\\"',
@@ -49,10 +51,13 @@ local defaultOptions = {
 	encodeSetAppend = nil -- Chars to append to the default set
 }
 
-default = nil
-strict = nil
+local modeOptions = {}
 
-function getEncoder(options)
+local function mergeOptions(options, mode)
+	jsonutil.doOptionMerge(options, false, 'strings', defaultOptions, mode and modeOptions[mode])
+end
+
+local function getEncoder(options)
 	options = options and util_merge({}, defaultOptions, options) or defaultOptions
 	local encodeSet = options.encodeSet
 	if options.encodeSetAppend then
@@ -74,3 +79,10 @@ function getEncoder(options)
 		string = encodeString
 	}
 end
+
+local strings = {
+	mergeOptions = mergeOptions,
+	getEncoder = getEncoder
+}
+
+return strings
