@@ -10,7 +10,7 @@ maintainer = "Peter Kapec"
 url = "http://luaforge.net/projects/luajson/"
 
 depends = {
-	"lua ~> 5.1",
-	"lpeg >=0.8.1",
-	"luafilesystem >=1.4.1"
+	"lua >= 5.1",
+	"lunit >= 0.4",
+	"lpeg >= 0.8.1"
 }
