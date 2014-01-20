@@ -11,6 +11,6 @@ url = "http://luaforge.net/projects/luajson/"
 
 depends = {
 	"lua >= 5.1",
-	"lunit >= 0.4",
+	-- "lunit >= 0.4", -- For unit tests only
 	"lpeg >= 0.8.1"
 }
